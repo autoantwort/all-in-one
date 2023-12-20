@@ -116,7 +116,7 @@
     },
     {
       "container_name": "nextcloud-aio-nextcloud",
-      "image_tag": "23.0.12-pho8.0",
+      "image_tag": "23.0.12-php8.0",
       "depends_on": [
         "nextcloud-aio-database",
         "nextcloud-aio-redis",
@@ -127,7 +127,7 @@
         "nextcloud-aio-docker-socket-proxy"
       ],
       "display_name": "Nextcloud",
-      "image": "nextcloud/aio-nextcloud",
+      "image": "autoantwort/aio-nextcloud",
       "init": true,
       "expose": [
         "9000",

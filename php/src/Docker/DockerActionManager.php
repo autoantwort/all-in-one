@@ -733,26 +733,7 @@ class DockerActionManager
 
     public function IsMastercontainerUpdateAvailable() : bool
     {
-        $imageName = 'nextcloud/all-in-one';
-        $containerName = 'nextcloud-aio-mastercontainer';
-
-        $tag = $this->GetCurrentChannel();
-
-        $runningDigests = $this->GetRepoDigestsOfContainer($containerName);
-        if ($runningDigests === null) {
-            return true;
-        }
-        $remoteDigest = $this->dockerHubManager->GetLatestDigestOfTag($imageName, $tag);
-        if ($remoteDigest === null) {
-            return false;
-        }
-
-        foreach ($runningDigests as $runningDigest) {
-            if ($remoteDigest === $runningDigest) {
-                return false;
-            }
-        }
-        return true;
+        return false;
     }
 
     public function sendNotification(Container $container, string $subject, string $message, string $file = '/notify.sh') : void

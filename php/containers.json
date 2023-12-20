@@ -479,23 +479,6 @@
       ]
     },
     {
-      "container_name": "nextcloud-aio-watchtower",
-      "image_tag": "latest",
-      "image": "nextcloud/aio-watchtower",
-      "init": true,
-      "environment": [
-        "CONTAINER_TO_UPDATE=nextcloud-aio-mastercontainer"
-      ],
-      "volumes": [
-        {
-          "source": "%WATCHTOWER_DOCKER_SOCKET_PATH%",
-          "destination": "/var/run/docker.sock",
-          "writeable": false
-        }
-      ],
-      "read_only": true
-    },
-    {
       "container_name": "nextcloud-aio-domaincheck",
       "image_tag": "latest",
       "image": "nextcloud/aio-domaincheck",

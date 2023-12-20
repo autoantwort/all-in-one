@@ -116,7 +116,7 @@
     },
     {
       "container_name": "nextcloud-aio-nextcloud",
-      "image_tag": "%AIO_CHANNEL%",
+      "image_tag": "23.0.12-pho8.0",
       "depends_on": [
         "nextcloud-aio-database",
         "nextcloud-aio-redis",
